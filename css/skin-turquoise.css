@@ -1,0 +1,92 @@
+a:hover {color: #1abc9c;}
+
+.btn-dark:hover {color: #1abc9c;}
+.btn-dark.selected {color: #1abc9c;}
+
+.title {color: #1abc9c;}
+
+#main-menu > li > a:hover,
+#main-menu > li > a:focus {color: #1abc9c;}
+
+#socials > li > a:hover {color: #1abc9c;}
+
+
+#topnav.scrolled .navbar-nav > li > a:hover,
+#topnav.scrolled .navbar-nav > li > a:focus {color: #1abc9c;}
+
+
+#topnav.scrolled .navbar-brand {color: #1abc9c;}
+
+.home-content:before {border-left: 10px solid #1abc9c;border-top: 10px solid #1abc9c;}
+.home-content:after{border-right: 10px solid #1abc9c;border-bottom: 10px solid #1abc9c;}
+
+#about.center .about-box:hover .ab-icon {color: #1abc9c;}
+.about-box:hover .ab-icon i{color: #1abc9c;}
+.ab-icon i {color: #1abc9c;}
+
+.counter i {color: #1abc9c;}
+
+.member-social > li > a:hover {color: #1abc9c;}
+.member-full h3,
+#members-slider li h3 {color: #1abc9c;}
+.member-full .member-social > li > a:hover,
+#members-slider .member-social > li > a:hover,
+#home .member-social > li > a:hover {color: #1abc9c;}
+
+.plan hr {border-top: 2px solid #1abc9c;}
+
+.featured {background: #1abc9c;color: #FFF;}
+
+.plan-icon {color: #1abc9c;}
+
+.service-icon {color: #1abc9c;}
+.service:hover h3 {color: #1abc9c;}
+
+.progress-bar {background-color: #1abc9c;}
+
+#filters > li.active {color: #1abc9c;}
+
+.project-overlay h3 {color: #1abc9c;}
+#portfolio-carousel .portfolio-description h2 {color: #1abc9c;}
+
+#modal-close:hover {color: #1abc9c;}
+
+.flex-control-paging li a.flex-active {background-color: #1abc9c;}
+
+.post-preview:hover .preview-body h3 {color: #1abc9c;}
+
+.owl-theme .owl-controls .owl-page.active span {background-color: #1abc9c;}
+
+
+.overlay-close:hover {color: #1abc9c;}
+
+#experience-slider .carousel-indicators li.active,
+#blog-slider .carousel-indicators li.active {background-color: #1abc9c;}
+
+.post-info i {color: #1abc9c;}
+
+.prev-post:hover span,
+.next-post:hover span {color: #1abc9c;}
+
+.selected {color: #1abc9c;}
+
+#video:hover .play {color: #1abc9c;}
+
+.copyright i {color: #1abc9c;}
+
+#blog-social > li > a:hover,
+#footer-social > li > a:hover {color: #1abc9c;}
+
+.digit {color: #1abc9c;}
+
+@media (max-width: 767px) {
+
+  #topnav .navbar-nav > li > a:hover,
+  #topnav.scrolled .navbar-nav > li > a:hover  {
+    color: #1abc9c;
+  }
+  #topnav .navbar-brand,
+  #topnav.scrolled .navbar-brand  {
+	color: #1abc9c;
+  }
+}
