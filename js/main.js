@@ -1,18 +1,18 @@
 (function($) {
 
-  "use strict"; 
+  "use strict";
 
   $(window).on('load', function() {
-	  
+
 	    $("body").queryLoader2({
-		barColor: "#e74c3c",
+		barColor: "#f1c40f",
         backgroundColor: "#f8f8f8",
         percentage: true,
         barHeight: 2,
         minimumTime: 200,
         fadeOutTime: 1000
 		});
-	  
+
     //Animated Background Slider
     $('#backgrounds.animated').flexslider({
       animation: "fade",
@@ -98,7 +98,7 @@
     });
 
   });
-  
+
   //Topnav transition
   $(window).scroll(function(event) {
     if ($(document).scrollTop() >= $('#home').height() / 6) {
@@ -107,16 +107,16 @@
       $('#topnav').removeClass('scrolled');
     }
   }).trigger('scroll');
-  
+
   //Topnav Mobile-view toggle
   $('.navbar-toggle').on('click', function(event) {
     $(this).toggleClass('active');
   });
-  
+
   // Show and hide color-switcher
   $(".color-switcher .switcher-button").on( 'click', function(){
 	$( ".color-switcher" ).toggleClass("show-color-switcher", "hide-color-switcher", 800);
-  });	
+  });
 
   // Color Skins
   $('a.color').on( 'click', function(){
@@ -124,14 +124,14 @@
 	$('#style-colors').attr('href', 'css/skin-' + title + '.css');
 	return false;
   });
-  
+
   //Close responsive nav
   $('#navigation li a').on('click', function() {
     if ($(window).width() < 768) {
       $('.navbar-toggle').on( 'click');
     }
   });
-  
+
   //Navigation Scrolling
   $('a[href*=#]').on( 'click', function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -180,15 +180,15 @@
           scrollTop: target.offset().top
         }, 1000);
       }
-    }    
-    var timeSet = setTimeout(function(e){      
+    }
+    var timeSet = setTimeout(function(e){
       $('#menu-toggle').trigger('click');
     }, 1000);
-	
+
 	clearTimeout(timeSet);
     return false;
   });
-  
+
   //Elements animation
   $('.animated').appear(function(){
     var element = $(this);
@@ -200,22 +200,22 @@
         if (element.hasClass('counter')) {
           element.find('.value').countTo();
         }
-      }, animationDelay); 
+      }, animationDelay);
     } else{
       element.addClass( animation + " visible" );
       if (element.hasClass('counter')) {
         element.find('.value').countTo();
       }
-		clearTimeout(timeSet); 
-    }  
-  },{accY: -150}); 
+		clearTimeout(timeSet);
+    }
+  },{accY: -150});
 
   $(window).resize(function() {
-	var $container = $('#projects');  
+	var $container = $('#projects');
 	$container.isotope({});
-	  
+
    $('#projects').isotope('reloadItems');
-  });  
+  });
 
   //Background images
   $('#backgrounds img').each(function() {
@@ -230,9 +230,9 @@
     $(this).parents('.img-holder').css('background-image', 'url('+image+')');
     $(this).remove();
   });
-  
+
   //Portfolio Modal
-  $('.project-overlay a').on('click', function(){     
+  $('.project-overlay a').on('click', function(){
     var projectUrl = $(this).attr("href");
 
     var project = '<div class="modal fade" id="project-modal"><div class="modal-dialog"><div class="modal-content"></div></div></div>';
@@ -240,22 +240,22 @@
     $(project).modal({
       remote: projectUrl + ' #project'
     })
-	
+
     return false;
-  
+
   });
 
   //Testimonials slides
   $('#testimonials-slider').flexslider({
     directionNav: false,
     animation: "slide"
-  });  
+  });
   //Members slides
   $('#members-slider').flexslider({
     directionNav: false,
     animation: "fade",
 	pauseOnHover: true
-  }); 
+  });
 
   //Blog Carousel
   $("#blog-carousel2").owlCarousel({
@@ -289,16 +289,16 @@
   $('#contact-panel .overlay-close').on( 'click', function() {
       $('#contact-panel').removeClass('open');
     });
-	
-  //Notify me 
 
-    $("#notifyMe").notifyMe();	
+  //Notify me
+
+    $("#notifyMe").notifyMe();
 
   //Google Maps
   function initMap() {
-    var myLatlng = new google.maps.LatLng(51.498609000000000000,-0.133906000000024500); // <- Your latitude and longitude
+    var myLatlng = new google.maps.LatLng(51.566439, -0.288216); // <- Your latitude and longitude
     var styles = [{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},{"featureType":"landscape","stylers":[{"color":"#f2e5d4"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},{"featureType":"administrative","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"road"},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{},{"featureType":"road","stylers":[{"lightness":20}]}]
-    
+
     var mapOptions = {
       zoom: 15,
       center: myLatlng,
@@ -330,9 +330,9 @@
   if ($('#map').length) {
     google.maps.event.addDomListener(window, 'load', initMap);
     $('#map').css('position', 'absolute');
-  }  
- 
-  
+  }
+
+
 })(jQuery);
 
     //Placeholder
@@ -344,12 +344,11 @@
     $('input,textarea').blur(function(){
        $(this).attr('placeholder',$(this).data('placeholder'));
     });
-	
+
 	$('input, textarea').placeholder();
-	
+
 	//Tabs
     $('#skillsTab a').on( 'click', function (e) {
         e.preventDefault()
         $(this).tab('show')
     })
-	
